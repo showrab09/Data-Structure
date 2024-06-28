@@ -14,17 +14,26 @@ public:
 int main()
 {
     Node *head = new Node(5);
-    Node *a = new Node(50);
-    Node *b = new Node(5000);
-    Node *c = new Node(1);
+    Node *a = new Node(100);
+    Node *b = new Node(300);
+    Node *c = new Node(400);
+    Node *d = new Node(900);
     head->next = a;
     a->next = b;
     b->next = c;
+    c->next = d;
     Node *temp = head;
     while (temp != NULL)
     {
-        cout << head->value << endl;
-        head = head->next;
+        if (temp->next == NULL)
+        {
+            cout << temp->value << endl;
+            break;
+        }
+        else
+        {
+            temp = temp->next;
+        }
     }
 
     return 0;

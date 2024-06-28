@@ -18,6 +18,7 @@ int main()
     Node b(200);
 
     a.next = &b;
+
     cout << a.value << endl
          << b.value << endl;
     cout << a.next->value;
