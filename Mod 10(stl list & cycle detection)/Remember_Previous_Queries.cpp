@@ -24,8 +24,7 @@ int main()
         {
             if (value < 0 || value >= myList.size())
             {
-                continue;
-            }
+                        }
             else
             {
                 myList.erase(next(myList.begin(), value));
